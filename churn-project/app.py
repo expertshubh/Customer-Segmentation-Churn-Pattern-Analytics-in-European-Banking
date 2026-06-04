@@ -1,4 +1,6 @@
 import streamlit as st
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -9,7 +11,7 @@ st.set_page_config(page_title="Bank Churn Analytics", layout="wide", page_icon="
 # ── LOAD & PREPARE DATA ───────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv('data/churn.csv')
+    df = pd.read_csv(os.path.join(BASE_DIR, 'data', 'churn.csv'))
     df.drop(columns=['CustomerId', 'Surname'], inplace=True)
     df['AgeGroup']       = pd.cut(df['Age'],            bins=[0,30,45,60,100],       labels=['<30','30-45','46-60','60+'])
     df['CreditBand']     = pd.cut(df['CreditScore'],    bins=[0,580,670,850],         labels=['Low','Medium','High'])
