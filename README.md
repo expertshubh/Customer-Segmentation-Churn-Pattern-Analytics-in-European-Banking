@@ -29,7 +29,7 @@ Despite having rich customer-level data, banks frequently struggle to translate 
 
 ## 📊 Live Dashboard
 
-> 🔗 **[Launch App on Streamlit Cloud](#)** ← *(add your deployed link here)*
+> 🔗 https://crmg8ywsm4wkmw8k5wdmzt.streamlit.app/
 
 **Dashboard Features:**
 - 5 live KPI metric cards
